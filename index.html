@@ -3,71 +3,409 @@
     <head>
         <title>Mba Rinda</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="img/pinku.png" type="image/x-icon"/>
+        <style>
+        .point {
+            margin-left: 1.6rem;
+        }
+
+        .contentPoint {
+            font-family: myFirstFont;
+            font-size: 1.6rem;
+            line-height: 3rem;
+            border-left: 2px solid rgba(112, 128, 144, 0.342);
+            padding: 0.7rem 0.2rem 0rem 0.7rem;
+            color: rgb(94, 94, 94);
+        }
+
+        .urutan1 {
+            position: absolute;
+            margin-top: 0.4rem;
+        }
+
+        .panel {
+            display: flex;
+            margin: 0.8rem 0.2rem;
+            color: rgba(128, 128, 128, 0.452);
+        }
+
+        .panel1, .panel2, .panel3 {
+            margin: auto 0.5rem;
+            background-color: rgba(179, 179, 179, 0.219);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .panel1:hover, .panel2:hover, .panel3:hover {
+            background-color: rgb(195, 209, 255);
+            color: rgba(128, 128, 128, 0.767);
+            cursor: pointer;
+        }
+
+        /* Ensure proper toggling */
+        .panel3.toggled {
+            background-color: rgb(195, 209, 255) !important;
+        }
+
+        .panel3.hovered {
+            background-color: rgb(195, 209, 255);
+        }
+
+        .panel3:not(.toggled):not(:hover) {
+            background-color: rgba(179, 179, 179, 0.219);
+        }
+
+        .contentPoint {
+            color: rgb(94, 94, 94);
+        }
+
+        .merah {
+            color: rgb(236, 161, 161);
+        }
+
+        .kuning {
+            color: rgb(226, 226, 143);
+        }
+
+        .hijau {
+            color: rgb(133, 189, 133);
+        }
+
+        .spc {
+            display: none;
+        }
+
+        .noKanji{
+            display: block;
+        }
+        .wKanji{
+            display: none;
+        }
+
+        .v, .v1, .n, .par, .adj {
+            color: rgb(94, 94, 94);
+        }
+        </style>
     </head>
     <body>
 
         
-        <div class="space"></div>
-        <div class="kontrol">
-            <button class="kana" id="btnKana">Show</button>
-            <button class="kana" id="btnRoma">Show</button>                
-        </div>
-        <div class="seksi">
-            <br>
-            <details class="h2 margin">
-                <summary><span>Latihan 1</span></summary>
-                <div class="flex">
-                    <div class="urutan">1.</div>
-                    <div class="teks jp batas">
-                        <ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>名前</rb><rp>(</rp><rt>なまえ</rt><rp>)</rp></ruby><span class="blue">は</span><ruby><rb>山下</rb><rp>(</rp><rt>やました</rt><rp>)</rp></ruby><span class="blue">と</span><ruby class="ja"><span class="jaa"><ruby><rb>申</rb><rp>(</rp><rt>もう</rt><rp>)</rp>します</ruby></span><rt class="sp">dipanggil</rt></ruby>。<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby><ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby><span class="blue">と</span>いう<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby><span class="blue">に</span>います。<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby><span class="blue">も</span><ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby><span class="blue">も</span>います。ここ<span class="blue">に</span><ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しい<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby><span class="blue">が</span>あります。この<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby><span class="blue">の</span><ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby><span class="blue">には</span>へや<span class="blue">が</span><ruby class="ja"><span class="jaa"><ruby><rb>広</rb><rp>(</rp><rt>ひろ</rt><rp>)</rp>い</ruby></span><rt class="sp">luas</rt></ruby>です。<ruby class="ja"><span class="jaa"><ruby><rb>古</rb><rp>(</rp><rt>ふる</rt><rp>)</rp>い</ruby></span><rt class="sp">tua</rt></ruby><ruby class="ja"><span class="ja">つくえ</span><rt class="sp">meja</rt></ruby><span class="blue">も</span>あります。
-                    </div>                    
-                </div>
-                <div class="flex">
-                    <div class="urutan">2.</div>
-                    <div class="teks jp batas">
-                        <ruby class="ja"><span class="ja"><ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby></span><rt class="sp">hari minggu</rt></ruby><span class="blue">に</span><ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>ども<span class="blue">は</span><ruby class="ja"><span class="jaa">ときどき</span><rt class="sp">kadang kala</rt></ruby><ruby class="ja"><span class="jaa"><ruby>ご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby></ruby></span><rt class="sp">nasi</rt></ruby><span class="blue">を</span><ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べたり、<ruby><rb>水</rb><rp>(</rp><rt>みず</rt><rp>)</rp></ruby><span class="blue">を</span><ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>んだりします。
+        <div class="bgHeader">
+            <div class="judul">RACE<span> TO </span>JAPAN</div>
+            <div class="slider">
+                <div class="list">
+                    <div class="item">
+                        <p>There's so much more to life than what you're feeling now.</p>
+                    </div>
+                    <div class="item">
+                        <p>It's not really how much you know but how well you can learn it.</p>
+                    </div>
+                    <div class="item">
+                        <p>You're not obligated to win. You're obligated to keep trying to do the best you can everyday.</p>
+                    </div>
+                    <div class="item">
+                        <p>Keputusan yang bagus datang dari pengalaman dan pengalaman itu datang dari keputusan yang bodoh.</p>
                     </div>
                 </div>
-                <div class="flex">
-                    <div class="urutan">3.</div>
-                    <div class="teks jp batas">
-                        <ruby><rb>毎月</rb><rp>(</rp><rt>まいげつ</rt><rp>)</rp></ruby><ruby class="ja"><span class="jaa">ぎんこう</span><rt class="sp">bank</rt></ruby><span class="blue">に</span>お<ruby><rb>金</rb><rp>(</rp><rt>かね</rt><rp>)</rp></ruby><span class="blue">を</span><ruby class="ja"><span class="jaa"><ruby><rb>下</rb><rp>(</rp><rt>おろ</rt><rp>)</rp>し</ruby></span><rt class="sp">mengambil</rt></ruby>て<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。そして、レストラン<span class="blue">で</span><ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きな<ruby class="ja"><span class="jaa">りょうり</span><rt class="sp">masakan</rt></ruby><span class="blue">を</span><ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べます。<ruby class="ja"><span class="jaa">たとえば</span><rt class="sp">contohnya</rt></ruby>、<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby><span class="blue">とか</span>、<ruby><rb>肉</rb><rp>(</rp><rt>にく</rt><rp>)</rp></ruby><span class="blue">とか</span>。
-                    </div>
-                </div>
-            </details>
-            <details class="h2 margin">
-                <summary><span>Latihan 2</span></summary>
-                <div class="flex">
-                    <div class="urutan">1.</div>
-                    <div class="teks jp batas">
-                        <ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby><span class="blue">では</span>、<ruby class="ja"><span class="jaa">まち</span><rt class="sp">kota</rt></ruby><span class="blue">の</span><ruby><rb>生活</rb><rp>(</rp><rt>せいかつ</rt><rp>)</rp></ruby><span class="blue">に</span><ruby><rb>慣</rb><rp>(</rp><rt>な</rt><rp>)</rp></ruby>れました。。
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="urutan">2.</div>
-                    <div class="teks jp batas">
-                        <ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby><span class="blue">は</span>この２<ruby><rb>年間</rb><rp>(</rp><rt>ねんかん</rt><rp>)</rp></ruby>、<ruby class="ja"><span class="jaa">きょうし</span><rt class="sp">pengajar</rt></ruby><ruby class="ja"><span class="jaa"><span class="grey">として</span></span><rt class="sp">sebagai</rt></ruby><ruby><rb>働</rb><rp>(</rp><rt>はたら</rt><rp>)</rp></ruby>いています。                        
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="urutan">3.</div>
-                    <div class="teks jp batas">
-                        <ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby><span class="blue">の</span><ruby class="ja"><span class="jaa"><ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby></span><rt class="sp">pekerjaan</rt></ruby><span class="blue">は</span><ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby><span class="blue">に</span><ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しいこと<span class="blue">を</span><ruby class="ja"><span class="jaa"><ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp>える</ruby></span><rt class="sp">mengajarkan</rt></ruby>ことです。ときどき、この<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby><span class="blue">で</span><ruby class="ja"><span class="jaa"><ruby><rb>一</rb><rp>(</rp><rt>いち</rt><rp>)</rp></ruby><ruby><rb>日中</rb><rp>(</rp><rt>にちちゅう</rt><rp>)</rp></ruby></span><rt class="sp">seharian</rt></ruby>とても<ruby class="ja"><span class="jaa"><ruby><rb>疲</rb><rp>(</rp><rt>つか</rt><rp>)</rp>れました</ruby></span><rt class="sp">melelahkan</rt></ruby>。
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="urutan">4.</div>
-                    <div class="teks jp batas">
-                        <ruby class="ja"><span class="jaa"><ruby><rb>去年</rb><rp>(</rp><rt>きょねん</rt><rp>)</rp></ruby></span><rt class="sp"><div class="rtFlex"><div>tahun</div><div>lalu</div></div></rt></ruby>、<ruby class="ja"><span class="jaa"><ruby><rb>金曜日</rb><rp>(</rp><rt>きんようび</rt><rp>)</rp></ruby></span><rt class="sp">hari minggu</rt></ruby><span class="blue">の</span><ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby><span class="blue">は</span><ruby class="ja"><span class="jaa"><ruby><rb>半日</rb><rp>(</rp><rt>はんにち</rt><rp>)</rp></ruby></span><rt class="sp"><div class="rtFlex"><div>setengah</div><div>hari</div></div></rt></ruby><ruby class="ja"><span class="jaa"><span class="blue">だけ</span></span><rt class="sp">saja</rt></ruby>だった。
-                    </div>
-                </div>
-            </details>
+            </div>
         </div>
         
+       
+        <div class="space">
+            <div class="space2">
+                <audio src="./msc/First Love_Utada Hikaru.mp3" id="player"></audio>
+                <i class="fas fa-chevron-left" id="opn"></i>
+                <div class="player">
+                    <div class="bubun control">
+                        <i class="fas fa-play" id="playBtn"></i>
+                    </div>
+                    <div class="bubun mscInfo">
+                        <div>First Love</div>
+                        <div class="bar">
+                            <div id="progress"></div>
+                        </div>
+                    </div>
+                    <div class="bubun" id="current">0:00</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="kontrol">
+            <div class="kolom">
+                <div class="top">Furigana</div>
+                    <button class="botan" id="btnKana">Show</button></div>
+            <div class="kolom">
+                <div class="top">Arti Kata</div>
+                <button class="botan" id="btnRoma">Show</button>
+            </div>
+            <div class="kolom">
+                <div class="top">Partikel</div>
+                <button class="botan" id="btnColor">Show</button>
+            </div>
+        </div>
+        
+        <div class="seksi"> 
+            <!--            
+            <div class="grid">
+                <div class="part part1">
+                    <div class="wadah">
+                        <img src="./img/ike-1.png" alt="">
+                        <img src="./img/ike-2.png" alt="">
+                        <img src="./img/ike-3.png" alt="">
+                        <img src="./img/ike-4.png" alt="">
+                    </div>
+                </div>
+                <div class="part part2">
+                    <div class="wadah2">
+                        <img src="./img/ike-6.png" alt="">
+                        <video src="./vid/sample-1.mp4" autoplay loop muted></video>
+                        <img src="./img/ike-7.png" alt="">
+                        <img src="./img/ike-8.png" alt="">
+                    </div>
+                </div>
+                <div class="part part3">
+                    <div class="wadah3">
+                        <img src="./img/Meme Cool 1.png" alt="">
+                        <img src="./img/Meme Cool 2.png" alt="">
+                        <img src="./img/Meme Cool 3.png" alt="">
+                    </div>
+                </div>
+                <div class="part part4">
+                    <div class="wadah4">
+                        <img src="./img/aset-1.PNG" alt="">
+                        <img src="./img/aset-2.jfif" alt="">
+                        <img src="./img/aset-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            -->       
+            <br>            
+            <div class="utama">
+                <details class="panah1 margin">
+                    <summary><span class="h2">Latihan</span></summary>
+                    <details class="panah2 content">
+                        <summary><span class="h3">Part 1</span></summary>
+                        <div class="flex">
+                            <div class="urutan">1.</div>
+                            <div class="teks jp batas">
+                                <ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby><span class="blue">の</span><ruby><rb>名前</rb><rp>(</rp><rt>なまえ</rt><rp>)</rp></ruby><span class="blue">は</span><ruby><rb>山下</rb><rp>(</rp><rt>やました</rt><rp>)</rp></ruby><span class="blue">と</span><ruby class="ja"><span class="jaa"><ruby><rb>申</rb><rp>(</rp><rt>もう</rt><rp>)</rp>します</ruby></span><rt class="sp">dipanggil</rt></ruby>。<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby><ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby><span class="blue">と</span>いう<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby><span class="blue">に</span>います。<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby><span class="blue">も</span><ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby><span class="blue">も</span>います。ここ<span class="blue">に</span><ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しい<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby><span class="blue">が</span>あります。この<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby><span class="blue">の</span><ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby><span class="blue">には</span>へや<span class="blue">が</span><ruby class="ja"><span class="jaa"><ruby><rb>広</rb><rp>(</rp><rt>ひろ</rt><rp>)</rp>い</ruby></span><rt class="sp">luas</rt></ruby>です。<ruby class="ja"><span class="jaa"><ruby><rb>古</rb><rp>(</rp><rt>ふる</rt><rp>)</rp>い</ruby></span><rt class="sp">tua</rt></ruby><ruby class="ja"><span class="ja">つくえ</span><rt class="sp">meja</rt></ruby><span class="blue">も</span>あります。
+                            </div>                    
+                        </div>
+                        <div class="flex">
+                            <div class="urutan">2.</div>
+                            <div class="teks jp batas">
+                                <ruby class="ja"><span class="ja"><ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby></span><rt class="sp">hari minggu</rt></ruby><span class="blue">に</span><ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>ども<span class="blue">は</span><ruby class="ja"><span class="jaa">ときどき</span><rt class="sp">kadang kala</rt></ruby><ruby class="ja"><span class="jaa"><ruby>ご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby></ruby></span><rt class="sp">nasi</rt></ruby><span class="blue">を</span><ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べたり、<ruby><rb>水</rb><rp>(</rp><rt>みず</rt><rp>)</rp></ruby><span class="blue">を</span><ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>んだりします。
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="urutan">3.</div>
+                            <div class="teks jp batas">
+                                <ruby><rb>毎月</rb><rp>(</rp><rt>まいげつ</rt><rp>)</rp></ruby><ruby class="ja"><span class="jaa">ぎんこう</span><rt class="sp">bank</rt></ruby><span class="blue">に</span>お<ruby><rb>金</rb><rp>(</rp><rt>かね</rt><rp>)</rp></ruby><span class="blue">を</span><ruby class="ja"><span class="jaa"><ruby><rb>下</rb><rp>(</rp><rt>おろ</rt><rp>)</rp>し</ruby></span><rt class="sp">mengambil</rt></ruby>て<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。そして、レストラン<span class="blue">で</span><ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きな<ruby class="ja"><span class="jaa">りょうり</span><rt class="sp">masakan</rt></ruby><span class="blue">を</span><ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べます。<ruby class="ja"><span class="jaa">たとえば</span><rt class="sp">contohnya</rt></ruby>、<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby><span class="blue">とか</span>、<ruby><rb>肉</rb><rp>(</rp><rt>にく</rt><rp>)</rp></ruby><span class="blue">とか</span>。
+                            </div>
+                        </div>
+                    </details>
+                    <details class="panah2 content">
+                        <summary><span class="h3">Part 2</span></summary>
+                        <div class="flex">
+                            <div class="urutan">1.</div>
+                            <div class="teks jp batas">
+                                <ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby><span class="blue">では</span>、<ruby class="ja"><span class="jaa">まち</span><rt class="sp">kota</rt></ruby><span class="blue">の</span><ruby><rb>生活</rb><rp>(</rp><rt>せいかつ</rt><rp>)</rp></ruby><span class="blue">に</span><ruby><rb>慣</rb><rp>(</rp><rt>な</rt><rp>)</rp></ruby>れました。
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="urutan">2.</div>
+                            <div class="teks jp batas">
+                                <ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby><span class="blue">は</span>この２<ruby><rb>年間</rb><rp>(</rp><rt>ねんかん</rt><rp>)</rp></ruby>、<ruby class="ja"><span class="jaa">きょうし</span><rt class="sp">pengajar</rt></ruby><ruby class="ja"><span class="jaa"><span class="grey">として</span></span><rt class="sp">sebagai</rt></ruby><ruby><rb>働</rb><rp>(</rp><rt>はたら</rt><rp>)</rp></ruby>いています。                        
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="urutan">3.</div>
+                            <div class="teks jp batas">
+                                <ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby><span class="blue">の</span><ruby class="ja"><span class="jaa"><ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby></span><rt class="sp">pekerjaan</rt></ruby><span class="blue">は</span><ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby><span class="blue">に</span><ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しいこと<span class="blue">を</span><ruby class="ja"><span class="jaa"><ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp>える</ruby></span><rt class="sp">mengajarkan</rt></ruby>ことです。ときどき、この<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby><span class="blue">で</span><ruby class="ja"><span class="jaa"><ruby><rb>一</rb><rp>(</rp><rt>いち</rt><rp>)</rp></ruby><ruby><rb>日中</rb><rp>(</rp><rt>にちちゅう</rt><rp>)</rp></ruby></span><rt class="sp">seharian</rt></ruby>とても<ruby class="ja"><span class="jaa"><ruby><rb>疲</rb><rp>(</rp><rt>つか</rt><rp>)</rp>れました</ruby></span><rt class="sp">melelahkan</rt></ruby>。
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="urutan">4.</div>
+                            <div class="teks jp batas">
+                                <ruby class="ja"><span class="jaa"><ruby><rb>去年</rb><rp>(</rp><rt>きょねん</rt><rp>)</rp></ruby></span><rt class="sp"><div class="rtFlex"><div>tahun</div><div>lalu</div></div></rt></ruby>、<ruby class="ja"><span class="jaa"><ruby><rb>金曜日</rb><rp>(</rp><rt>きんようび</rt><rp>)</rp></ruby></span><rt class="sp">hari jumat</rt></ruby><span class="blue">の</span><ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby><span class="blue">は</span><ruby class="ja"><span class="jaa"><ruby><rb>半日</rb><rp>(</rp><rt>はんにち</rt><rp>)</rp></ruby></span><rt class="sp"><div class="rtFlex"><div>setengah</div><div>hari</div></div></rt></ruby><ruby class="ja"><span class="jaa"><span class="blue">だけ</span></span><rt class="sp">saja</rt></ruby>だった。
+                            </div>
+                        </div>
+                    </details>                    
+                </details>
+
+                <details class="panah1 margin">
+                    <summary><span class="h2">PR</span></summary>
+                    <details class="panah2 content">
+                        <summary><span class="h3">Part 1</span></summary>
+                        <div class="urutan1">1.</div>
+                        <div class="point">
+                            <div class="contentPoint noKanji">            
+                                <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><ruby><rb>川</rb><rp>(</rp><rt>かわ</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">   </span>そば<span class="par">に</span><span class="spc">   </span><span class="v">いた</span>。<span class="n">お</span>ねえ<span class="n">ちゃん</span><span class="par">は</span><span class="spc">   </span><span class="adj">つまらない</span><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">   </span><span class="v">よんで</span><span class="v1">いて</span><span class="spc">   </span><span class="v">あそんで</span><span class="v1">くれなかった</span>。「<span class="adj">おもしろい</span>こと<span class="par">が</span><span class="spc">   </span><span class="adj">ない</span>」アリス<span class="par">は</span><span class="spc">   </span><span class="v">いった</span>。そのとき<span class="spc">   </span><span class="adj">しろい</span>ウサギ<span class="par">が</span><span class="spc">   </span><span class="v">とうった</span>。ふつう<span class="par">の</span><span class="spc">   </span>ウサギ<span class="par">では</span><span class="spc">   </span><span class="adj">なくて</span><span class="spc">   </span>シャツ<span class="par">を</span><span class="spc">   </span><span class="v">きている</span>ウサギ<span class="spc">   </span><span class="v">だった</span>。ウサギ<span class="par">は</span><span class="spc">   </span>とけい<span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>「<span class="adj">おそい！おそい!</span>」<span class="par">と</span><span class="spc">   </span><span class="v">いって</span><span class="spc">   </span><span class="v1">はしった</span>。「<span class="n">ちょっと</span<span class="spc">   </span><span class="v">まって</span><span class="v1">ください</span>」<span class="par">と</span><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v">よんだ</span>。でも<span class="spc">   </span>ウサギ<span class="par">は</span><span class="spc">   </span>とまら<span class="adj">なくて</span><span class="spc">   </span><span class="v">はしった</span>。
+                            </div>
+                            <div class="contentPoint wKanji">
+                                <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><ruby><rb>川</rb><rp>(</rp><rt>かわ</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">   </span><ruby><rb>傍</rb><rp>(</rp><rt>そば</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">   </span><span class="v">いた</span>。<span class="n">お</span><ruby><rb>姉</rb><rp>(</rp><rt>ねえ</rt><rp>)</rp></ruby><span class="n">ちゃん</span><span class="par">は</span><span class="spc">   </span><span class="adj">つまらない</span><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>んで</span><span class="v1">いて</span><span class="spc">   </span><span class="v"><ruby><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>んで</span><span class="v1">くれなかった</span>。「<span class="adj"><ruby><rb>面白</rb><rp>(</rp><rt>おもしろ</rt><rp>)</rp></ruby></span>こと<span class="par">が</span><span class="spc">   </span><span class="adj">ない</span>」アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>った</span>。その<ruby><rb>時</rb><rp>(</rp><rt>とき</rt><rp>)</rp></ruby><span class="spc">   </span><span class="adj"><ruby><rb>白</rb><rp>(</rp><rt>しろ</rt><rp>)</rp></ruby></span>ウサギ<span class="par">が</span><span class="spc">   </span><span class="v"><ruby><rb>通</rb><rp>(</rp><rt>とお</rt><rp>)</rp></ruby>った</span>。<ruby><rb>普通</rb><rp>(</rp><rt>ふつう</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">   </span>ウサギ<span class="par">では</span><span class="spc">   </span><span class="adj">なくて</span><span class="spc">   </span>シャツ<span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ている</span>ウサギ<span class="spc">   </span><span class="v">だった</span>。ウサギ<span class="par">は</span><span class="spc">   </span><ruby><rb>時計</rb><rp>(</rp><rt>とけい</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>「<span class="adj"><ruby><rb>遅</rb><rp>(</rp><rt>おそ</rt><rp>)</rp></ruby>い！<ruby><rb>遅</rb><rp>(</rp><rt>おそ</rt><rp>)</rp></ruby>い!</span>」<span class="par">と</span><span class="spc">   </span><span class="v"><ruby><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>って</span><span class="spc">   </span><span class="v1"><ruby><rb>走</rb><rp>(</rp><rt>はし</rt><rp>)</rp></ruby>った</span>。「<span class="n">ちょっと</span<span class="spc">   </span><span class="v"><ruby><rb>待</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>って</span><span class="v1"><ruby><rb>下</rb><rp>(</rp><rt>くだ</rt><rp>)</rp></ruby>さい</span>」<span class="par">と</span><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby><rb>呼</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>んだ</span>。でも<span class="spc">   </span>ウサギ<span class="par">は</span><span class="spc">   </span><ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>とまら<span class="adj">なくて</span><span class="spc">   </span><span class="v"><ruby><rb>走</rb><rp>(</rp><rt>はし</rt><rp>)</rp></ruby>った</span>。
+                            </div>
+                            <div class="panel">
+                                <div class="panel1">
+                                    spacing
+                                    <div class="iconSample"></div>
+                                </div>
+                                <div class="panel2">
+                                    kanji
+                                    <div class="iconSample"></div>
+                                </div>
+                                <div class="panel3">
+                                    mappu
+                                    <div class="iconSample"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </details>
+            </div>
+            <br><br><br><br><br><br>
+        </div> 
+        
         <div class="space"></div>
+        <div class="footer"></div>
+        <div class="bungkus">
+        <div class="scallop-up"></div>
+        <div class="scallop-up-shadow"></div>
+        </div>
+        <div class="colour-block">
+            <p>designed by Dadi</p>
+        </div>
 
         <script src="./script.js"></script>
+        <script src="./msc.js"></script>
+        <script>
+            const panel1 = document.querySelector(".panel1");
+
+            let isHidden = true; // Initialize the hidden state
+
+            panel1.addEventListener('click', function() {
+                const spc = document.querySelectorAll('.spc');
+                const newBgColor = isHidden ? 'rgb(195, 209, 255)' : 'rgba(179, 179, 179, 0.219)';  // Set new background color
+
+                panel1.style.backgroundColor = newBgColor;  // Apply the new background color
+
+                spc.forEach(function(element) {
+                    // Toggle display based on isHidden
+                    element.style.display = isHidden ? 'inline' : 'none';
+                });
+
+                // Toggle the state for the next click
+                isHidden = !isHidden;
+
+                // Set hover effect dynamically
+                panel1.onmouseover = function() {
+                    panel1.style.backgroundColor = 'rgb(195, 209, 255)';  // Hover effect
+                };
+                panel1.onmouseleave = function() {
+                    panel1.style.backgroundColor = newBgColor;  // Reset to the toggled color when hover ends
+                };
+            });
+
+
+            // Get references to the elements
+            const panel2 = document.querySelector('.panel2');
+            const noKanji = document.querySelector('.noKanji');
+            const wKanji = document.querySelector('.wKanji');
+
+            // Initialize the state
+            let isNoKanjiVisible = false;  // Track the visibility state of noKanji
+
+            // Add click event listener to panel2
+            panel2.addEventListener('click', () => {
+                // Toggle background color based on the visibility of kanji text
+                const newBgColor = isNoKanjiVisible ? 'rgba(179, 179, 179, 0.219)' : 'rgb(195, 209, 255)';
+                panel2.style.backgroundColor = newBgColor;
+
+                // Set hover effect dynamically
+                panel2.onmouseover = function() {
+                    panel2.style.backgroundColor = 'rgb(195, 209, 255)';  // Hover effect
+                };
+                panel2.onmouseleave = function() {
+                    panel2.style.backgroundColor = newBgColor;  // Reset to the toggled color when hover ends
+                };
+
+                // Toggle visibility of kanji text
+                if (isNoKanjiVisible) {
+                    noKanji.style.display = 'block';
+                    wKanji.style.display = 'none';
+                } else {
+                    noKanji.style.display = 'none';
+                    wKanji.style.display = 'block';
+                }
+                // Toggle the visibility state
+                isNoKanjiVisible = !isNoKanjiVisible;
+            });
+
+            // Get references to the elements
+            const panel3 = document.querySelector('.panel3');
+            const vElements = document.querySelectorAll('.v');
+            const v1Elements = document.querySelectorAll('.v1');
+            const nElements = document.querySelectorAll('.n');
+            const parElements = document.querySelectorAll('.par');
+            const adjElements = document.querySelectorAll('.adj');
+
+            // Set initial colors
+            const initialColor = "rgb(94, 94, 94)";
+            const vColor = "rgb(167, 120, 82)";
+            const v1Color = "rgba(167, 120, 82, 0.666)";
+            const nColor = "rgba(94, 94, 94, 0.726)";
+            const parColor = "rgb(74, 148, 197)";
+            const adjColor = "rgb(94, 179, 91)";
+
+            // Set initial background color
+            const initialBgColor = "rgba(179, 179, 179, 0.219)"; // Initial background color
+            const toggledBgColor = "rgb(195, 209, 255)"; // Background color after toggle
+
+            // Track toggle state
+            let isToggled = false;
+
+            // Add click event listener to panel3
+            panel3.addEventListener('click', () => {
+                isToggled = !isToggled; // Toggle state
+
+                if (!isToggled) {
+                    // Revert to initial colors
+                    vElements.forEach(el => el.style.color = initialColor);
+                    v1Elements.forEach(el => el.style.color = initialColor);
+                    nElements.forEach(el => el.style.color = initialColor);
+                    parElements.forEach(el => el.style.color = initialColor);
+                    adjElements.forEach(el => el.style.color = initialColor);
+
+                    // Remove toggled class
+                    panel3.classList.remove('toggled');
+                } else {
+                    // Apply new colors
+                    vElements.forEach(el => el.style.color = vColor);
+                    v1Elements.forEach(el => el.style.color = v1Color);
+                    nElements.forEach(el => el.style.color = nColor);
+                    parElements.forEach(el => el.style.color = parColor);
+                    adjElements.forEach(el => el.style.color = adjColor);
+
+                    // Add toggled class
+                    panel3.classList.add('toggled');
+                }
+            });
+
+            // Add hover effect using CSS classes instead of inline styles
+            panel3.addEventListener('mouseover', () => {
+                if (!isToggled) {
+                    panel3.classList.add('hovered');
+                }
+            });
+
+            panel3.addEventListener('mouseleave', () => {
+                if (!isToggled) {
+                    panel3.classList.remove('hovered');
+                }
+            });
+        </script>
     </body>
 </html>
