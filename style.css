@@ -621,7 +621,7 @@ ruby rt {
   color: #474545;
 }
 
-.teks .ja .sp {
+.ja .sp {
   position: relative;
   top: -0.5rem;
   color: rgb(216, 144, 85);
