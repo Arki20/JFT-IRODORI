@@ -31,7 +31,8 @@
             color: rgba(128, 128, 128, 0.452);
         }
 
-        .panel1, .panel2, .panel3 {
+        .panel1, .panel2, .panel3, .panelx {
+            font-size: 14px;
             margin: auto 0.5rem;
             background-color: rgba(179, 179, 179, 0.219);
             padding: 0.2rem 0.5rem;
@@ -39,7 +40,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .panel1:hover, .panel2:hover, .panel3:hover {
+        .panel1:hover, .panel2:hover, .panel3:hover, .panelx:hover {
             background-color: rgb(195, 209, 255);
             color: rgba(128, 128, 128, 0.767);
             cursor: pointer;
@@ -85,10 +86,9 @@
             display: none;
         }
 
-        .v, .v1, .n, .par, .adj {
+        .v, .v1, .n, .par, .par1, .adj {
             color: rgb(94, 94, 94);
         }
-        </style>
     </head>
     <body>
 
@@ -241,7 +241,7 @@
                     <details class="panah2 content">
                         <summary><span class="h3">Part 1</span></summary>
                         <div class="urutan1">1.</div>
-                        <div class="point">
+                        <div class="point" id="bag1">
                             <div class="contentPoint noKanji">            
                                 <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><ruby><rb>川</rb><rp>(</rp><rt>かわ</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">   </span><ruby class="ja"><span class="jaa">そば</span><rt class="sp">pinggir</rt></ruby><span class="par">に</span><span class="spc">   </span><span class="v">いた</span>。<span class="n">お</span>ねえ<span class="n">ちゃん</span><span class="par">は</span><span class="spc">   </span><span class="adj"><ruby class="ja"><span class="jaa">つまらない</span><rt class="sp">bosan</rt></ruby></span><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">   </span><span class="v"></ruby>よんで</span><span class="v1">いて</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">あそんで</span><rt class="sp">bermain</rt></ruby></span><span class="v1">くれなかった</span>。「<span class="adj">おもしろい</span>こと<span class="par">が</span><span class="spc">   </span><span class="adj">ない</span>」と<span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">いった</span><rt class="sp">berkata</rt></ruby></span>。<ruby class="ja"><span class="jaa">そのとき</span><rt class="sp">saat itu</rt></ruby><span class="spc">   </span><span class="adj">しろい</span>ウサギ<span class="par">が</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">とうった</span><rt class="sp">lewat</rt></ruby></span>。<ruby class="ja"><span class="jaa">ふつう</span><rt class="sp">biasa</rt></ruby><span class="par">の</span><span class="spc">   </span>ウサギ<span class="par">では</span><span class="spc">   </span><span class="adj">なくて</span><span class="spc">   </span>シャツ<span class="par">を</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">きて</span><rt class="sp">memakai</rt></ruby>いる</span>ウサギ<span class="spc">   </span><span class="v">だった</span>。ウサギ<span class="par">は</span><span class="spc">   </span><ruby class="ja"><span class="jaa">とけい</span><rt class="sp">jam</rt></ruby><span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>「<span class="adj"><ruby class="ja"><span class="jaa">おそい</span><rt class="sp">telat</rt></ruby>！おそい!</span>」<span class="par">と</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">いって</span><rt class="sp">berkata</rt></ruby></span><span class="spc">   </span><span class="v1"><ruby class="ja"><span class="jaa">はしった</span><rt class="sp">berlari</rt></ruby></span>。「<span class="n">ちょっと</span<span class="spc">   </span><span class="v"><ruby class="ja"><span class="ja">まって</span><rt class="sp">tunggu</rt></ruby></span><span class="v1">ください</span>」<span class="par">と</span><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">よんだ</span><rt class="sp">panggil</rt></ruby></span>。でも<span class="spc">   </span>ウサギ<span class="par">は</span><span class="spc">   </span><ruby class="ja"><span class="jaa">とまら<span class="adj">なくて</span></span><rt class="sp">tidak berhenti</rt></ruby><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">はしった</span><rt class="sp">berlari</rt></ruby></span>。
                             </div>
@@ -263,6 +263,61 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                    </details>
+                    <details class="panah2 content">
+                        <summary><span class="h3">Part 2</span></summary>
+                        <div class="urutan1">2.</div>
+                        <div class="point" id="bag2">
+                            <div class="contentPoint noKanji">
+                                アリス<span class="par">は</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby></ruby><ruby><rb>飛</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>び</span><span class="v1"><ruby><rb>上</rb><rp>(</rp><rt>あ</rt><rp>)</rp>がて</ruby></span></span><rt class="sp">melompat</rt></ruby>、ウサギ<span class="par">の</span><span class="spc">　</span><ruby><rb>後</rb><rp>(</rp><rt>あと</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>追</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>った</span></span><rt class="sp">mengikuti</rt></ruby>。<ruby class="ja"><span class="jaa"><span class="v">しゃべる</span></span><rt class="sp">ngobrol</rt></ruby>ウサギ<span class="par">を</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>こと<span class="par">が</span><span class="spc">　</span><span class="adj">ない</span>。ウサギ<span class="par">は</span><span class="spc">　</span><span class="adj"><ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>く</span><span class="v"><ruby><rb>走</rb><rp>(</rp><rt>はし</rt><rp>)</rp></ruby>って</span>、<ruby class="ja"><span class="jaa"><ruby><rb>急</rb><rp>(</rp><rt>きゅう</rt><rp>)</rp></ruby></span><rt class="sp">tiba-tiba</rt></ruby><span class="par">に</span><span class="spc">　</span>ウサギ<span class="par">の</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby></span><rt class="sp">lubang</rt></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>飛</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>び</span><span class="v1"><ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>んだ</span></span><rt class="sp">melompat</rt></ruby>。アリス<span class="par">も</span><span class="spc">　</span>ウサギ<span class="par">の</span><span class="spc">　</span><ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">　</span><span class="v"><ruby><rb>飛</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>び</span><span class="v1"><ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>んだ</span>。<ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">　</span><ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby><span class="par">は</span><span class="spc">　</span><ruby class="ja"><span class="jaa">たて<ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby></span><rt class="sp">lubang lurus</rt></ruby><span class="par">だった</span>。アリス<span class="par">は</span><span class="spc">　</span>すぐ<ruby><rb><span class="spc">　</span>下</rb><rp>(</rp><rt>した</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ちた</span></span><rt class="sp">jatuh</rt></ruby>。でも、<ruby class="ja"><span class="jaa"><span class="v">おどろいた</span>こと</span><rt class="sp">terkejut</rt></ruby><span class="par">に</span><span class="spc">　<ruby class="ja"><span class="jaa">ゆっくり</span><rt class="sp">perlahan-lahan</rt></ruby><span class="spc">　</span>ゆっくり<span class="spc">　</span><span class="v"><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ちた</span>。
+                            </div>
+                            <div class="contentPoint wKanji">
+                                <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>
+                            </div>
+                            <div class="panel">
+                                <div class="panel1">
+                                    spacing
+                                    <div class="iconSample"></div>
+                                </div>
+                                <div class="panelx">
+                                    kanji
+                                    <div class="iconSample"></div>
+                                </div>
+                                <div class="panel3">
+                                    mappu
+                                    <div class="iconSample"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </details>
+                    <details class="panah2 content">
+                        <summary><span class="h3">Part 3</span></summary>
+                        <div class="urutan1">3.</div>
+                        <div class="point" id="bag3">
+                            <div class="contentPoint noKanji">
+                                <span class="v"><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ちる</span><ruby class="ja"><span class="jaa"><ruby><rb>間</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby></span><rt class="sp">during</rt></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ひま</span><rt class="sp">free time</rt></ruby><span class="par">が</span><span class="spc">　</span><ruby class="ja"><span class="jaa">たっぷり</span><rt class="sp">plentifully</rt></ruby><span class="spc">　</span><span class="v">あって</span><span class="spc">　</span><ruby class="ja"><span class="jaa">まわり</span><rt class="sp">surroundings</rt></ruby><span class="par">を</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ゆっくり</span><rt class="sp">leisurely</rt></ruby><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby></span><span class="v1">まわせた</span></span><rt class="sp">can look around</rt></ruby>。まず<span class="par">は</span><span class="spc">　</span><ruby><rb>下</rb><rp>(</rp><rt>した</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て</span><ruby class="ja"><span class="jaa"><span class="v1">みた</span></span><rt class="sp">try</rt></ruby><span class="par">けど</span>、<ruby class="ja"><span class="jaa"><span class="adj"><ruby><rb>暗</rb><rp>(</rp><rt>くら</rt><rp>)</rp></ruby></span><span class="v">すぎて</span></span><rt class="sp">too dark</rt></ruby><span class="spc">　</span><ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby><span class="par">も</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>えなかった</span>。その<ruby><rb>後</rb><rp>(</rp><rt>あと</rt><rp>)</rp></ruby>、<ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">　</span>まわり<span class="par">を</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て</span>、<ruby><rb>目</rb><rp>(</rp><rt>め</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">　</span><span class="v"><ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>まる</span><span class="par1">の</span><span class="par">は</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ぎっしり</span><rt class="sp">crowded</rt></ruby><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>並</rb><rp>(</rp><rt>なら</rt><rp>)</rp></ruby>んだ</span></span><rt class="sp">to line up</rt></ruby>。<ruby class="ja"><span class="jaa">とだな</span><rt class="sp">cupboard</rt></ruby><span class="par">や</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ほんだな</span><rt class="sp">bookshelf</rt></ruby><span class="par">だった</span>。<ruby class="ja"><span class="jaa">たな</span><rt class="sp">shelf</rt></ruby><span class="par">の</span><span class="spc">　</span><ruby><rb>一</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ<span class="par">から</span><span class="spc">　</span><ruby class="ja"><span class="jaa">びん</span><rt class="sp">jar</rt></ruby><span class="par">を</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>取</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>り</span><span class="v1"><ruby><rb>下</rb><rp>(</rp><rt>くだ</rt><rp>)</rp></ruby>した</span></span><rt class="sp">take down</rt></ruby>。
+                            </div>
+                            <div class="contentPoint wKanji">
+                                <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>
+                            </div>
+                            <div class="panel">
+                                <div class="panel1">
+                                    spacing
+                                    <div class="iconSample"></div>
+                                </div>
+                                <div class="panelx">
+                                    kanji
+                                    <div class="iconSample"></div>
+                                </div>
+                                <div class="panel3">
+                                    mappu
+                                    <div class="iconSample"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                     </details>
                 </details>
             </div>
@@ -282,128 +337,120 @@
         <script src="./script.js"></script>
         <script src="./msc.js"></script>
         <script>
-            const panel1 = document.querySelector(".panel1");
-
-            let isHidden = true; // Initialize the hidden state
-
-            panel1.addEventListener('click', function() {
-                const spc = document.querySelectorAll('.spc');
-                const newBgColor = isHidden ? 'rgb(195, 209, 255)' : 'rgba(179, 179, 179, 0.219)';  // Set new background color
-
-                panel1.style.backgroundColor = newBgColor;  // Apply the new background color
-
-                spc.forEach(function(element) {
-                    // Toggle display based on isHidden
-                    element.style.display = isHidden ? 'inline' : 'none';
-                });
-
-                // Toggle the state for the next click
-                isHidden = !isHidden;
-
-                // Set hover effect dynamically
-                panel1.onmouseover = function() {
-                    panel1.style.backgroundColor = 'rgb(195, 209, 255)';  // Hover effect
-                };
-                panel1.onmouseleave = function() {
-                    panel1.style.backgroundColor = newBgColor;  // Reset to the toggled color when hover ends
-                };
-            });
-
-
-            // Get references to the elements
-            const panel2 = document.querySelector('.panel2');
-            const noKanji = document.querySelector('.noKanji');
-            const wKanji = document.querySelector('.wKanji');
-
-            // Initialize the state
-            let isNoKanjiVisible = false;  // Track the visibility state of noKanji
-
-            // Add click event listener to panel2
-            panel2.addEventListener('click', () => {
-                // Toggle background color based on the visibility of kanji text
-                const newBgColor = isNoKanjiVisible ? 'rgba(179, 179, 179, 0.219)' : 'rgb(195, 209, 255)';
-                panel2.style.backgroundColor = newBgColor;
-
-                // Set hover effect dynamically
-                panel2.onmouseover = function() {
-                    panel2.style.backgroundColor = 'rgb(195, 209, 255)';  // Hover effect
-                };
-                panel2.onmouseleave = function() {
-                    panel2.style.backgroundColor = newBgColor;  // Reset to the toggled color when hover ends
-                };
-
-                // Toggle visibility of kanji text
-                if (isNoKanjiVisible) {
-                    noKanji.style.display = 'block';
-                    wKanji.style.display = 'none';
-                } else {
-                    noKanji.style.display = 'none';
-                    wKanji.style.display = 'block';
+            document.querySelectorAll('.point').forEach(function(point) {
+                // Inside each point (bag1, bag2)
+            
+                // Panel 1 in this specific point
+                const panel1 = point.querySelector('.panel1');
+                let isHiddenPanel1 = true;
+            
+                if (panel1) {
+                    panel1.addEventListener('click', function() {
+                        const spc = point.querySelectorAll('.spc');
+                        const newBgColor = isHiddenPanel1 ? 'rgb(195, 209, 255)' : 'rgba(179, 179, 179, 0.219)';
+            
+                        panel1.style.backgroundColor = newBgColor;
+            
+                        spc.forEach(function(element) {
+                            element.style.display = isHiddenPanel1 ? 'inline' : 'none';
+                        });
+            
+                        isHiddenPanel1 = !isHiddenPanel1;
+            
+                        panel1.onmouseover = function() {
+                            panel1.style.backgroundColor = 'rgb(195, 209, 255)';
+                        };
+                        panel1.onmouseleave = function() {
+                            panel1.style.backgroundColor = newBgColor;
+                        };
+                    });
                 }
-                // Toggle the visibility state
-                isNoKanjiVisible = !isNoKanjiVisible;
-            });
-
-            // Get references to the elements
-            const panel3 = document.querySelector('.panel3');
-            const vElements = document.querySelectorAll('.v');
-            const v1Elements = document.querySelectorAll('.v1');
-            const nElements = document.querySelectorAll('.n');
-            const parElements = document.querySelectorAll('.par');
-            const adjElements = document.querySelectorAll('.adj');
-
-            // Set initial colors
-            const initialColor = "rgb(94, 94, 94)";
-            const vColor = "rgb(167, 120, 82)";
-            const v1Color = "rgba(167, 120, 82, 0.666)";
-            const nColor = "rgba(94, 94, 94, 0.726)";
-            const parColor = "rgb(74, 148, 197)";
-            const adjColor = "rgb(94, 179, 91)";
-
-            // Set initial background color
-            const initialBgColor = "rgba(179, 179, 179, 0.219)"; // Initial background color
-            const toggledBgColor = "rgb(195, 209, 255)"; // Background color after toggle
-
-            // Track toggle state
-            let isToggled = false;
-
-            // Add click event listener to panel3
-            panel3.addEventListener('click', () => {
-                isToggled = !isToggled; // Toggle state
-
-                if (!isToggled) {
-                    // Revert to initial colors
-                    vElements.forEach(el => el.style.color = initialColor);
-                    v1Elements.forEach(el => el.style.color = initialColor);
-                    nElements.forEach(el => el.style.color = initialColor);
-                    parElements.forEach(el => el.style.color = initialColor);
-                    adjElements.forEach(el => el.style.color = initialColor);
-
-                    // Remove toggled class
-                    panel3.classList.remove('toggled');
-                } else {
-                    // Apply new colors
-                    vElements.forEach(el => el.style.color = vColor);
-                    v1Elements.forEach(el => el.style.color = v1Color);
-                    nElements.forEach(el => el.style.color = nColor);
-                    parElements.forEach(el => el.style.color = parColor);
-                    adjElements.forEach(el => el.style.color = adjColor);
-
-                    // Add toggled class
-                    panel3.classList.add('toggled');
+            
+                // Panel 2 in this specific point
+                const panel2 = point.querySelector('.panel2');
+                const noKanji = point.querySelector('.noKanji');
+                const wKanji = point.querySelector('.wKanji');
+                let isNoKanjiVisible = false;
+            
+                if (panel2) {
+                    panel2.addEventListener('click', () => {
+                        const newBgColor = isNoKanjiVisible ? 'rgba(179, 179, 179, 0.219)' : 'rgb(195, 209, 255)';
+                        panel2.style.backgroundColor = newBgColor;
+            
+                        panel2.onmouseover = function() {
+                            panel2.style.backgroundColor = 'rgb(195, 209, 255)';
+                        };
+                        panel2.onmouseleave = function() {
+                            panel2.style.backgroundColor = newBgColor;
+                        };
+            
+                        if (isNoKanjiVisible) {
+                            noKanji.style.display = 'block';
+                            wKanji.style.display = 'none';
+                        } else {
+                            noKanji.style.display = 'none';
+                            wKanji.style.display = 'block';
+                        }
+                        isNoKanjiVisible = !isNoKanjiVisible;
+                    });
                 }
-            });
-
-            // Add hover effect using CSS classes instead of inline styles
-            panel3.addEventListener('mouseover', () => {
-                if (!isToggled) {
-                    panel3.classList.add('hovered');
-                }
-            });
-
-            panel3.addEventListener('mouseleave', () => {
-                if (!isToggled) {
-                    panel3.classList.remove('hovered');
+            
+                // Panel 3 in this specific point
+                const panel3 = point.querySelector('.panel3');
+                const vElements = point.querySelectorAll('.v');
+                const v1Elements = point.querySelectorAll('.v1');
+                const nElements = point.querySelectorAll('.n');
+                const parElements = point.querySelectorAll('.par');
+                const par1Elements = point.querySelectorAll('.par1');
+                const adjElements = point.querySelectorAll('.adj');
+            
+                const initialColor = "rgb(94, 94, 94)";
+                const vColor = "rgb(167, 120, 82)";
+                const v1Color = "rgba(167, 120, 82, 0.666)";
+                const nColor = "rgba(94, 94, 94, 0.726)";
+                const parColor = "rgb(74, 148, 197)";
+                const par1Color = "rgb(139, 188, 204)";
+                const adjColor = "rgb(94, 179, 91)";
+            
+                const initialBgColor = "rgba(179, 179, 179, 0.219)";
+                const toggledBgColor = "rgb(195, 209, 255)";
+                
+                let isToggled = false;
+            
+                if (panel3) {
+                    panel3.addEventListener('click', () => {
+                        isToggled = !isToggled;
+            
+                        if (!isToggled) {
+                            vElements.forEach(el => el.style.color = initialColor);
+                            v1Elements.forEach(el => el.style.color = initialColor);
+                            nElements.forEach(el => el.style.color = initialColor);
+                            parElements.forEach(el => el.style.color = initialColor);
+                            par1Elements.forEach(el => el.style.color = initialColor);
+                            adjElements.forEach(el => el.style.color = initialColor);
+                            panel3.classList.remove('toggled');
+                        } else {
+                            vElements.forEach(el => el.style.color = vColor);
+                            v1Elements.forEach(el => el.style.color = v1Color);
+                            nElements.forEach(el => el.style.color = nColor);
+                            parElements.forEach(el => el.style.color = parColor);
+                            par1Elements.forEach(el => el.style.color = par1Color);
+                            adjElements.forEach(el => el.style.color = adjColor);
+                            panel3.classList.add('toggled');
+                        }
+                    });
+            
+                    panel3.addEventListener('mouseover', () => {
+                        if (!isToggled) {
+                            panel3.classList.add('hovered');
+                        }
+                    });
+            
+                    panel3.addEventListener('mouseleave', () => {
+                        if (!isToggled) {
+                            panel3.classList.remove('hovered');
+                        }
+                    });
                 }
             });
         </script>
