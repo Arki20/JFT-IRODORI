@@ -19,6 +19,20 @@ var player = document.getElementById("player");
 let progress = document.getElementById("progress");
 let playBtn = document.getElementById("playBtn");
 let currentTimeDisplay = document.getElementById("current"); // Reference to the current time display
+let musicTitle = document.getElementById("musicTitle"); // Reference to the song title display
+
+let songs = [
+    { src: './msc/CHRISYE.mp3', title: 'CHRISYE' },
+    { src: './msc/First Love_Utada Hikaru.mp3', title: 'First Love' },
+    { src: './msc/Say Yes_Punch.mp3', title: 'Say Yes' },
+    { src: './msc/Serenata Jiwa_Dian.mp3', title: 'Serenata Jiwa' },
+]; // List of songs
+let currentSongIndex = 0; // Start with the first song
+
+// Initialize the player with the first song
+function initializePlayer() {
+    playSong(currentSongIndex); // Play the first song
+}
 
 // Play/pause functionality
 var playpause = function () {
@@ -31,15 +45,16 @@ var playpause = function () {
 
 playBtn.addEventListener("click", playpause);
 
+// Update the play/pause button icon when playing or pausing
 player.onplay = function () {
     playBtn.classList.remove("fa-play");
     playBtn.classList.add("fa-pause");
-}
+};
 
 player.onpause = function () {
     playBtn.classList.add("fa-play");
     playBtn.classList.remove("fa-pause");
-}
+};
 
 // Update progress and current time on every 'timeupdate'
 player.ontimeupdate = function () {
@@ -64,3 +79,39 @@ function timeFormat(ct) {
 
     return minutes + ":" + seconds;
 }
+
+// Play the current song
+function playSong(songIndex) {
+    player.src = songs[songIndex].src;
+    musicTitle.innerText = songs[songIndex].title; // Update the song title display
+    player.play(); // Play the new song
+}
+
+// Call the initializePlayer function when the page loads
+window.onload = initializePlayer;
+
+// Next button functionality
+document.getElementById("nextBtn").addEventListener("click", function () {
+    // Move to the next song
+    currentSongIndex++;
+    
+    // If we're at the last song, loop back to the first song
+    if (currentSongIndex >= songs.length) {
+        currentSongIndex = 0; // Loop back to the first song
+    }
+
+    playSong(currentSongIndex); // Play the next song
+});
+
+// Previous button functionality (if needed)
+document.getElementById("prevBtn").addEventListener("click", function () {
+    // Move to the previous song
+    currentSongIndex--;
+    
+    // If we're at the first song, loop back to the last song
+    if (currentSongIndex < 0) {
+        currentSongIndex = songs.length - 1; // Loop back to the last song
+    }
+
+    playSong(currentSongIndex); // Play the previous song
+});
