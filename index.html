@@ -31,7 +31,7 @@
             color: rgba(128, 128, 128, 0.452);
         }
 
-        .panel1, .panel2, .panel3, .panelx {
+        .panel1, .panel2, .panel3,.panely {
             font-size: 14px;
             margin: auto 0.5rem;
             background-color: rgba(179, 179, 179, 0.219);
@@ -40,7 +40,11 @@
             transition: background-color 0.3s ease;
         }
 
-        .panel1:hover, .panel2:hover, .panel3:hover, .panelx:hover {
+        .panely:hover {
+            cursor: pointer;
+        }
+
+        .panel1:hover, .panel2:hover, .panel3:hover {
             background-color: rgb(195, 209, 255);
             color: rgba(128, 128, 128, 0.767);
             cursor: pointer;
@@ -117,14 +121,18 @@
        
         <div class="space">
             <div class="space2">
-                <audio src="./msc/First Love_Utada Hikaru.mp3" id="player"></audio>
+                <audio src="" id="player"></audio>
                 <i class="fas fa-chevron-left" id="opn"></i>
                 <div class="player">
                     <div class="bubun control">
                         <i class="fas fa-play" id="playBtn"></i>
+                        <div class="next">
+                            <i class="fas fa-chevron-left" id="prevBtn"></i> <!-- Previous button -->
+                            <i class="fas fa-chevron-right" id="nextBtn"></i> <!-- Next button -->
+                        </div>
                     </div>
                     <div class="bubun mscInfo">
-                        <div>First Love</div>
+                        <div id="musicTitle">First Love</div>
                         <div class="bar">
                             <div id="progress"></div>
                         </div>
@@ -149,40 +157,46 @@
         </div>
         
         <div class="seksi"> 
-            <!--            
             <div class="grid">
                 <div class="part part1">
                     <div class="wadah">
-                        <img src="./img/ike-1.png" alt="">
-                        <img src="./img/ike-2.png" alt="">
-                        <img src="./img/ike-3.png" alt="">
-                        <img src="./img/ike-4.png" alt="">
+                        <img src="./pic/Lee1.png" alt="">
+                        <img src="./pic/Lee2.png" alt="">
+                        <img src="./pic/Lee3.png" alt="">
+                        <img src="./pic/Lee4.png" alt="">
+                        <img src="./pic/Lee5.png" alt="">
+                        <img src="./pic/Lee6.png" alt="">
                     </div>
                 </div>
                 <div class="part part2">
                     <div class="wadah2">
-                        <img src="./img/ike-6.png" alt="">
-                        <video src="./vid/sample-1.mp4" autoplay loop muted></video>
-                        <img src="./img/ike-7.png" alt="">
-                        <img src="./img/ike-8.png" alt="">
+                        <img src="./pic/Lee7.png" alt="">
+                        <img src="./pic/Lee8.png" alt="">
+                        <img src="./pic/Lee9.png" alt="">
+                        <img src="./pic/Lee10.png" alt="">
+                        <img src="./pic/Lee11.png" alt="">
+                        <img src="./pic/Lee12.png" alt="">
                     </div>
                 </div>
                 <div class="part part3">
                     <div class="wadah3">
-                        <img src="./img/Meme Cool 1.png" alt="">
-                        <img src="./img/Meme Cool 2.png" alt="">
-                        <img src="./img/Meme Cool 3.png" alt="">
+                        <img src="./pic/Lee01.png" alt="">
+                        <img src="./pic/Lee02.png" alt="">
+                        <img src="./pic/Lee03.png" alt="">
+                        <img src="./pic/Lee04.png" alt="">
+                        <img src="./pic/Lee05.png" alt="">
                     </div>
                 </div>
                 <div class="part part4">
                     <div class="wadah4">
-                        <img src="./img/aset-1.PNG" alt="">
-                        <img src="./img/aset-2.jfif" alt="">
-                        <img src="./img/aset-3.jpg" alt="">
+                        <img src="./pic/Lee06.png" alt="">
+                        <img src="./pic/Lee07.png" alt="">
+                        <img src="./pic/Lee08.png" alt="">
+                        <img src="./pic/Lee09.png" alt="">
+                        <img src="./pic/Lee099.png" alt="">
                     </div>
                 </div>
             </div>
-            -->       
             <br>            
             <div class="utama">
                 <details class="panah1 margin">
@@ -316,6 +330,16 @@
                                     mappu
                                     <div class="iconSample"></div>
                                 </div>
+                            </div>
+                        </div>
+                        <br>
+                    </details>
+                    <details class="panah2 content">
+                        <summary><span class="h3">Part 4</span></summary>
+                        <div class="urutan1">4.</div>
+                        <div class="point" id="bag4">
+                            <div class="contentPoint noKanji">
+                                そのびん<span class="blue1">に</span><span class="blue">は</span><ruby class="ja"><span class="jaa">ラベル</span><rt class="sp">label</rt></ruby>が<ruby class="ja"><span class="jaa"><ruby><rb>貼</rb><rp>(</rp><rt>は</rt><rp>)</rp>って</ruby></span><rt class="sp">to stick</rt></ruby>あって「オレンジ・マーマレード」<span class="blue">と</span><ruby class="ja"><span class="jaa"><ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp>いて</ruby></span><rt class="sp">to write</rt></ruby>あった。でも、びん<span class="blue">は</span><ruby class="ja"><span class="jaa"><ruby><rb>空</rb><rp>(</rp><rt>から</rt><rp>)</rp>っぽ</ruby></span><rt class="sp">empty</rt></ruby><span class="blue">だった</span>。アリス<span class="blue">は</span><ruby><rb>空</rb><rp>(</rp><rt>から</rt><rp>)</rp></ruby>っぽ<span class="blue">の</span>びん<span class="blue1">で</span><span class="blue">も</span>、<ruby><rb>下</rb><rp>(</rp><rt>した</rt><rp>)</rp></ruby><span class="blue">へ</span><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>とし<span class="blue1">て</span><span class="blue">は</span><ruby class="ja"><span class="jaa"><ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp>い</ruby></span><rt class="sp">bad</rt></ruby><span class="blue">と</span><ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>った。「アリス<span class="blue">が</span>びん<span class="blue">を</span>」<ruby class="ja"><span class="jaa">うまく</span><rt class="sp">skilfully</rt></ruby>とどな<span class="blue">の</span><ruby><rb>一</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ<span class="blue">へ</span><ruby class="ja"><span class="jaa"><ruby><rb>通</rb><rp>(</rp><rt>とお</rt><rp>)</rp>りすがり<span class="blue">に</span></ruby></span><rt class="sp">in passing</rt></ruby><ruby class="ja"><span class="jaa"><ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp>いて</ruby></span><rt class="sp">to put</rt></ruby>おいた。
                             </div>
                         </div>
                         <br>
